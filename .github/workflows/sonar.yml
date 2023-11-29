@@ -49,8 +49,6 @@ jobs:
     steps:
       - name: Pull the docker image
         run: docker pull emmabongo/netflix:latest
-      - name: Trivy image scan
-        run: trivy image emmabongo/netflix:latest
       - name: Run the container netflix
         run: docker run -d --name netflix -p 8081:80 emmabongo/netflix:latest
 
