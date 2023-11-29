@@ -45,7 +45,7 @@ jobs:
 
   deploy:    
     needs: build-analyze-scan  
-    runs-on: [aws-netflix]
+    runs-on: [awss-netflix]
     steps:
       - name: Pull the docker image
         run: docker pull emmabongo/netflix:latest
